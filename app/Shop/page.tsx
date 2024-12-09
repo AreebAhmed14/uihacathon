@@ -1,8 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import {Poppins} from "next/font/google"
 
-const PoppinsFont = Poppins({ subsets: ['latin'],weight:['400' , '700'] })
 
 const page = () => {
   return (

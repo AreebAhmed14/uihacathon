@@ -1,4 +1,3 @@
-import react from "react";
 import Hero from "./components/Hero";
 import TwoProduct from "./components/Two-product";
 import Toppicks from "./components/Top-picks";
