@@ -17,38 +17,38 @@ const page = () => {
         <div className='z-20 flex mt-2 justify-center items-center w-[120px] h-[24px]'>
             <span className='text-black font-[600]'>Home</span>
             <span>{`>`}</span>
-            <span className='text-gray-800  font-[600]'>Blog</span>
+            <span className='text-gray-800  font-[600]'>Blogs</span>
         </div>
     </div>
 
 
     <div className='w-full flex flex-col justify-start items-center'>
         <h1 className={`text-[36px] font-[500] mt-5`}>Our Blogs</h1>
-        <h1 className={`text-[16px] font-[500] mt-[2rem] ${PoppinsFont} text-[#9F9F9F]`}>Find a bright ideal to suit your taste with our great selection</h1>
+        <center><h1 className={`text-[16px] font-[500] mt-[2rem] ${PoppinsFont} text-[#9F9F9F]`}>Find a bright ideal to suit your taste with our great selection</h1></center>
         
 
         <div className='w-full  mt-[5rem] flex justify-center flex-col items-center'>
-        <div className='w-[887px]  flex flex-col items-center mx-10'>
+        <div className='w-[887px]  flex flex-col items-center mx-10 max-[885px]:w-[700px] max-[700px]:w-[600px] max-[600px]:w-[500px] max-[500px]:w-[400px] max-[400px]:w-[300px]'>
                 <Image src={'/static/blog1.jpg'} alt="" width={950} height={950} className='w-full '/>
-                <h1 className={`text-[36px] font-[700] mt-5`}>Going all-in with millennial design</h1>
-                <h1 className={`text-[20px] font-[500] mt-5`}>
+                <h1 className={`text-[36px] font-[700] mt-5 max-[500px]:text-[30px] max-[400px]:text-[25px]`}>Going all-in with millennial design</h1>
+                <h1 className={`text-[20px] font-[500] mt-5 max-[500px]:text-[16px] max-[400px]:text-[14px]`}>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, libero sunt natus enim porro ea aspernatur numquam iste? Debitis magni libero ab sapiente nemo blanditiis iure culpa aspernatur nobis repellat, facere, consectetur, reprehenderit eum optio quod voluptate voluptatibus ratione perferendis ducimus laborum nam beatae doloremque recusandae sunt. Reprehenderit, adipisci natus?
                 </h1>
                 <button className='px-8 hover:bg-[#FAF4F4] py-2 rounded-full border-[1px] border-black my-5'>View</button>
             </div>
-            <div className='w-[887px] flex flex-col items-center mx-10'>
+            <div className='w-[887px] flex flex-col items-center mx-10 max-[885px]:w-[700px] max-[700px]:w-[600px] max-[600px]:w-[500px] max-[500px]:w-[400px] max-[400px]:w-[300px]'>
                 <Image src={'/static/blog2.jpg'} alt="" width={950} height={950} className='w-full '/>
-                <h1 className={`text-[36px] font-[700] mt-5`}>Going all-in with millennial design</h1>
-                <h1 className={`text-[20px] font-[500] mt-5`}>
+                <h1 className={`text-[36px] font-[700] mt-5 max-[500px]:text-[30px] max-[400px]:text-[25px]`}>Going all-in with millennial design</h1>
+                <h1 className={`text-[20px] font-[500] mt-5 max-[500px]:text-[16px] max-[400px]:text-[14px]`}>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, libero sunt natus enim porro ea aspernatur numquam iste? Debitis magni libero ab sapiente nemo blanditiis iure culpa aspernatur nobis repellat, facere, consectetur, reprehenderit eum optio quod voluptate voluptatibus ratione perferendis ducimus laborum nam beatae doloremque recusandae sunt. Reprehenderit, adipisci natus?
                 </h1>
                 <button className='px-8 hover:bg-[#FAF4F4] py-2 rounded-full border-[1px] border-black my-5'>View</button>
 
             </div>
-            <div className='w-[887px] flex flex-col items-center mx-10'>
+            <div className='w-[887px] flex flex-col items-center mx-10 max-[885px]:w-[700px] max-[700px]:w-[600px] max-[600px]:w-[500px] max-[500px]:w-[400px] max-[400px]:w-[300px]'>
                 <Image src={'/static/blog3.jpg'} alt="" width={950} height={950} className='w-full '/>
-                <h1 className={`text-[36px] font-[700] mt-5`}>Going all-in with millennial design</h1>
-                <h1 className={`text-[20px] font-[500] mt-5`}>
+                <h1 className={`text-[36px] font-[700] mt-5 max-[500px]:text-[30px] max-[400px]:text-[25px]`}>Going all-in with millennial design</h1>
+                <h1 className={`text-[20px] font-[500] mt-5 max-[500px]:text-[16px] max-[400px]:text-[14px]`}>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, libero sunt natus enim porro ea aspernatur numquam iste? Debitis magni libero ab sapiente nemo blanditiis iure culpa aspernatur nobis repellat, facere, consectetur, reprehenderit eum optio quod voluptate voluptatibus ratione perferendis ducimus laborum nam beatae doloremque recusandae sunt. Reprehenderit, adipisci natus?
                     
                 </h1>
