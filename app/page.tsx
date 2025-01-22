@@ -10,7 +10,7 @@ export default function Home() {
     <>
     <Hero />
     <TwoProduct />
-    <Toppicks />
+    {/* <Toppicks /> */}
     <Herosame />
     <Blogs />
     <Insta />

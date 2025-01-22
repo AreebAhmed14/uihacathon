@@ -57,7 +57,7 @@ const Header = () => {
             <Link href={"/Account"}><MdOutlineAccountCircle size={25} /></Link>
             <IoSearchSharp size={25} />
             <FaRegHeart size={25} className='max-[390px]:hidden '/>
-            <MdOutlineShoppingCart size={25} onClick={showorunshow} className='cursor-pointer'/>
+            <Link href={'/Cart'}><MdOutlineShoppingCart size={25} className='cursor-pointer'/></Link>
 
         </div>
         <CgMenuHotdog className='text-[2rem] mr-5 max-[560px]:block hidden' onClick={menushoworunshow}/>

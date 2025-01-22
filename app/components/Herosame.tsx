@@ -19,7 +19,7 @@ const Herosame = () => {
     <center>
   <p className={` font-[500] text-[62px] ${PoppinsFont} max-[580px]:text-[50px] max-[376px]:text-[40px] max-[376px]:font-[450]`}>Asgaard sofaa</p>
   </center> 
-  <Link href={"/Detail"}><button className={`font-[500] text-[24px] border-[1px] underline text-center  mt-[2rem] ${PoppinsFont} max-[580px]:text-[20px] max-[580px]:mt-[1rem]`}>Order Now</button></Link>
+  <Link href={"/Shop"}><button className={`font-[500] text-[24px] border-[1px] underline text-center  mt-[2rem] ${PoppinsFont} max-[580px]:text-[20px] max-[580px]:mt-[1rem]`}>Order Now</button></Link>
 </div>
 
 

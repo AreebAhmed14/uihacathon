@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 const page = () => {
@@ -56,26 +57,10 @@ const page = () => {
               
             </div>
 
-            <div className='w-[608px] flex flex-col items-center justify-start h-[790px] mt-[5rem] max-[1220px]:w-[550px] max-[1165px]:w-[500px] max-[1100px]:w-[400px] max-[1100px]:h-auto max-[400px]:w-[350px] max-[400px]:w-[320px] max-[800px]:mb-20'>
-                <div className='w-[530px] flex justify-between mt-[4rem] max-[1220px]:w-[450px] max-[1100px]:w-[350px] max-[400px]:w-[300px]'>
-                    <p className='font-[600] text-[24px]'>Product</p>
-                    <p className='font-[600] text-[24px]'>Sub Total</p>
-                </div>
-                <div className='w-[530px] flex justify-between mt-[2rem] max-[1220px]:w-[450px] max-[1100px]:w-[350px] max-[400px]:w-[300px]'>
-                    <p className='font-[400] text-[16px] text-[#9F9F9F]'>Asgaard sofa</p>
-                    <p className='font-[400] text-[16px]'>Rs. 250,000.00</p>
-                </div>
-                <div className='w-[530px] flex justify-between mt-[2rem] max-[1220px]:w-[450px] max-[1100px]:w-[350px] max-[400px]:w-[300px]'>
-                    <p className='font-[600] text-[16px]'>Subtotal</p>
-                    <p className='font-[600] text-[20px]'>Rs. 250,000.00</p>
-                </div>
-                <div className='w-[530px] flex justify-between mt-[2rem] max-[1220px]:w-[450px] max-[1100px]:w-[350px] max-[400px]:w-[300px]'>
-                    <p className='font-[400] text-[16px]'>Total</p>
-                    <p className='font-[700] text-[24px] text-[#B88E2F]'>Rs. 250,000.00</p>
-                </div>
+        
                 <hr />
 
-                <div className='w-[530px] flex flex-col justify-center mt-[3rem] max-[1220px]:w-[450px] max-[1100px]:w-[350px] max-[400px]:w-[300px]'>
+                <div className='w-[530px] flex flex-col justify-center mt-[7rem] max-[1220px]:w-[450px] max-[1100px]:w-[350px] max-[400px]:w-[300px]'>
 
                 <p className='font-[600] text-[16px]'>Direct Bank Transfer</p>
                 <p className='font-[400] text-[16px] text-[#9F9F9F] mt-5'>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
@@ -83,12 +68,11 @@ const page = () => {
                 <p className='font-[400] text-[16px] text-[#9F9F9F] mt-4'>Direct Bank Transfer</p>
                 <p className='font-[400] text-[16px] text-[#000000] mt-4'>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our privacy policy.</p>
                 <div className=' flex justify-center mt-[3rem]'>
-                    <button className='px-10 py-4 bg-[#B88E2F] text-[white] font-[600] rounded-md'>Place Order</button>
+                   <Link href={"/Order"}> <button className='px-10 py-4 bg-[#B88E2F] text-[white] font-[600] rounded-md'>Place Order</button></Link>
 
                 </div>
                 </div>
             </div>
-    </div>
     </>
   )
 }

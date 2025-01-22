@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Footer = () => {
   return (
-    <div className='flex justify-center'>
+    <div className='flex relative justify-center'>
       <div className='w-[1170px] h-[555px] max-[727px]:h-auto max-[727px]:flex-col flex relative justify-around items-center'>
         <div className='w-[285px] h-[72px] max-[727px]:items-center flex flex-col justify-around '>
             <h1 className='font-[700] my-5 ml-3 text-[#9F9F9F] text-[18px]'>400 University Drive Suite 200 Coral Gables,

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/Footer";
+import { Wraped } from "./context/wraped";
 
 
 const geistSans = localFont({
@@ -32,7 +33,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
     <Header />
+    <Wraped>
         {children}
+        </Wraped>
     <Footer />
 
       </body>
