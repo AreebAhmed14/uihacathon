@@ -4,22 +4,18 @@ import React, { useContext, useState, useEffect } from "react";
 import Image from "next/image";
 import cartContext from "../context/cartcontext";
 import { urlFor } from "@/sanity/lib/image";
-import { Any } from "@sanity/client/stega";
-
 
 
 const Cart = () => {
   const value = useContext(cartContext); // Get the context value
-  const [confirm, setConfirm] = useState<any>(null); // Initialize as null
+  const [confirm, setConfirm] = useState<any>(null)
 
-  // Update `confirm` state when `value` changes
   useEffect(() => {
     if (value) {
       setConfirm(value);
     }
   }, [value]);
 
-  // Safely check if `confirm` and `confirm.data` exist
   const hasData = confirm && confirm.data;
 
   if (!value || !hasData) {
