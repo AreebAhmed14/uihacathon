@@ -1,10 +1,14 @@
 import React from 'react'
 import Image from 'next/image'
 import {Poppins} from "next/font/google"
+import { client } from '@/sanity/lib/client'
+import { urlFor } from '@/sanity/lib/image'
 
 const PoppinsFont = Poppins({ subsets: ['latin'],weight:['400' , '700'] })
 
-const page = () => {
+const page = async () => {
+    let blog = await client.fetch('*[_type=="blog"]')
+
   return (
     <>
       <div className='w-full h-[450px] inset-0 bg-[url("/static/shop.jpg")]  flex-col relative bg-cover bg-center flex justify-center items-center'>
@@ -22,42 +26,28 @@ const page = () => {
     </div>
 
 
-    <div className='w-full flex flex-col justify-start items-center'>
+    <div className='w-full h-auto flex flex-col justify-start items-center'>
         <h1 className={`text-[36px] font-[500] mt-5`}>Our Blogs</h1>
         <center><h1 className={`text-[16px] font-[500] mt-[2rem] ${PoppinsFont} text-[#9F9F9F]`}>Find a bright ideal to suit your taste with our great selection</h1></center>
+       
+        {
+            blog.map((val:any,key:any)=>(
+                <div key={key} className='w-[800px] bg-[#f7e7b7] rounded-lg my-4 flex justify-center items-center flex-col max-[830px]:w-[600px] max-[610px]:w-[400px] max-[404px]:w-[300px]'>
+                    <center>
+
+                    <p className='text-[1.4rem] font-[700] my-4 max-[610px]:text-[1.1rem] max-[404px]:text-[1rem]'>{val.title}</p>
+                    </center>
+                    <div className='w-[600px] h-[400px] my-4 rounded-lg max-[830px]:w-[400px] max-[610px]:w-[300px] max-[610px]:h-[300px] max-[404px]:w-[250px] max-[404px]:h-[250px]'>
+                        <Image src={urlFor(val.imagePath).url()} alt="" width={200} height={200} className='w-full h-full overflow-hidden rounded-lg'/>
+                    </div>
+                        <p className='text-[1.3rem] font-[400] m-4 max-[610px]:leading-6 max-[610px]:text-[1rem] max-[404px]:leading-5 max-[404px]:m-2'>{val.shortdes}...</p>
+
+                        <p className='text-[1.3rem] font-[700] my-5 max-[610px]:my-3 max-[404px]:text-[1.1rem]'>{`View >`}</p>
+                </div>
+            ))
+        }
+
         
-
-        <div className='w-full  mt-[5rem] flex justify-center flex-col items-center'>
-        <div className='w-[887px]  flex flex-col items-center mx-10 max-[885px]:w-[700px] max-[700px]:w-[600px] max-[600px]:w-[500px] max-[500px]:w-[400px] max-[400px]:w-[300px]'>
-                <Image src={'/static/blog1.jpg'} alt="" width={950} height={950} className='w-full '/>
-                <h1 className={`text-[36px] font-[700] mt-5 max-[500px]:text-[30px] max-[400px]:text-[25px]`}>Going all-in with millennial design</h1>
-                <h1 className={`text-[20px] font-[500] mt-5 max-[500px]:text-[16px] max-[400px]:text-[14px]`}>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, libero sunt natus enim porro ea aspernatur numquam iste? Debitis magni libero ab sapiente nemo blanditiis iure culpa aspernatur nobis repellat, facere, consectetur, reprehenderit eum optio quod voluptate voluptatibus ratione perferendis ducimus laborum nam beatae doloremque recusandae sunt. Reprehenderit, adipisci natus?
-                </h1>
-                <button className='px-8 hover:bg-[#FAF4F4] py-2 rounded-full border-[1px] border-black my-5'>View</button>
-            </div>
-            <div className='w-[887px] flex flex-col items-center mx-10 max-[885px]:w-[700px] max-[700px]:w-[600px] max-[600px]:w-[500px] max-[500px]:w-[400px] max-[400px]:w-[300px]'>
-                <Image src={'/static/blog2.jpg'} alt="" width={950} height={950} className='w-full '/>
-                <h1 className={`text-[36px] font-[700] mt-5 max-[500px]:text-[30px] max-[400px]:text-[25px]`}>Going all-in with millennial design</h1>
-                <h1 className={`text-[20px] font-[500] mt-5 max-[500px]:text-[16px] max-[400px]:text-[14px]`}>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, libero sunt natus enim porro ea aspernatur numquam iste? Debitis magni libero ab sapiente nemo blanditiis iure culpa aspernatur nobis repellat, facere, consectetur, reprehenderit eum optio quod voluptate voluptatibus ratione perferendis ducimus laborum nam beatae doloremque recusandae sunt. Reprehenderit, adipisci natus?
-                </h1>
-                <button className='px-8 hover:bg-[#FAF4F4] py-2 rounded-full border-[1px] border-black my-5'>View</button>
-
-            </div>
-            <div className='w-[887px] flex flex-col items-center mx-10 max-[885px]:w-[700px] max-[700px]:w-[600px] max-[600px]:w-[500px] max-[500px]:w-[400px] max-[400px]:w-[300px]'>
-                <Image src={'/static/blog3.jpg'} alt="" width={950} height={950} className='w-full '/>
-                <h1 className={`text-[36px] font-[700] mt-5 max-[500px]:text-[30px] max-[400px]:text-[25px]`}>Going all-in with millennial design</h1>
-                <h1 className={`text-[20px] font-[500] mt-5 max-[500px]:text-[16px] max-[400px]:text-[14px]`}>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, libero sunt natus enim porro ea aspernatur numquam iste? Debitis magni libero ab sapiente nemo blanditiis iure culpa aspernatur nobis repellat, facere, consectetur, reprehenderit eum optio quod voluptate voluptatibus ratione perferendis ducimus laborum nam beatae doloremque recusandae sunt. Reprehenderit, adipisci natus?
-                    
-                </h1>
-                <button className='px-8 hover:bg-[#FAF4F4] py-2 rounded-full border-[1px] border-black my-5'>View</button>
-                <button className='px-8 hover:bg-[#FAF4F4] py-2 rounded-full bg-[#f7e9e9] my-8'>Explore more</button>
-
-            </div>
-           
-        </div>
       </div>
 
     </>

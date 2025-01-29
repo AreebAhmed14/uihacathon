@@ -1,9 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import {Poppins} from "next/font/google"
+import { client } from '@/sanity/lib/client'
 
 const PoppinsFont = Poppins({ subsets: ['latin'],weight:['400' , '700'] })
-const Toppicks = () => {
+const Toppicks = async () => {
+          const datas = await client.fetch('*[_type=="product"][3..5]');
+  console.log(datas)
   return (
     <>
       <div className='w-full h-[777px] max-[1164px]:h-[auto] flex flex-col justify-start items-center'>
