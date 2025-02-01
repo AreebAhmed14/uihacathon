@@ -14,21 +14,21 @@ const Blogs = () => {
 
         <div className='w-full h-[400px]  mt-[5rem] flex justify-center items-center max-[770px]:flex-col max-[770px]:h-auto max-[580px]:mt-[2rem]'>
         <div className='w-[287px] h-full max-[770px]:h-auto flex flex-col items-center mx-10 max-[1050px]:mx-2 max-[770px]:h-auto max-[770px]:mt-10'>
-                <Image src={'/static/blog1.jpg'} alt="" width={950} height={950} className='w-full h-[287px] max-[580px]:h-auto'/>
-                <h1 className={`text-[16px] font-[400] mt-5`}>Going all-in with millennial design</h1>
-                <h1 className={`text-[24px] font-[600] mt-5 underline max-[770px]:mt-2`}>Read More</h1>
+                <Image src={'/static/b1.webp'} alt="" width={950} height={950} className='w-full h-[287px] max-[580px]:h-auto'/>
+                <h1 className={`text-[16px] font-[400] mt-5`}>Transform Your Space with Premium Furniture</h1>
+                <Link href={"/Blog/1"}><h1 className={`text-[24px] font-[600] mt-5 underline max-[770px]:mt-2`}>Read More</h1></Link>
             </div>
             <div className='w-[287px] h-full max-[770px]:h-auto flex flex-col items-center mx-10 max-[1050px]:mx-2 max-[770px]:h-auto max-[770px]:mt-10'>
-                <Image src={'/static/blog2.jpg'} alt="" width={950} height={950} className='w-full h-[287px] max-[580px]:h-auto'/>
+                <Image src={'/static/b2.webp'} alt="" width={950} height={950} className='w-full h-[287px] max-[580px]:h-auto'/>
                 
-                <h1 className={`text-[16px] font-[400] mt-5`}>Going all-in with millennial design</h1>
-                <h1 className={`text-[24px] font-[600] mt-5 underline max-[770px]:mt-2`}>Read More</h1>
+                <h1 className={`text-[16px] font-[400] mt-5`}>Upgrade Your Living Spaces with Our Furniture Collection</h1>
+                <Link href={"/Blog/2"}><h1 className={`text-[24px] font-[600] mt-5 underline max-[770px]:mt-2`}>Read More</h1></Link>
             </div>
             <div className='w-[287px] h-full max-[770px]:h-auto flex flex-col items-center mx-10 max-[1050px]:mx-2 
             max-[770px]:mt-10'>
-                <Image src={'/static/blog3.jpg'} alt="" width={950} height={950}  className='w-full h-[287px] max-[580px]:h-auto  '/>
-                <h1 className={`text-[16px] font-[400] mt-5`}>Going all-in with millennial design</h1>
-                <h1 className={`text-[24px] font-[600] text-center mt-5 underline max-[770px]:mt-2`}>Read More</h1>
+                <Image src={'/static/b3.webp'} alt="" width={950} height={950}  className='w-full h-[287px] max-[580px]:h-auto  '/>
+                <h1 className={`text-[16px] font-[400] mt-5`}>Elevate Your Home with Stylish and Functional Furniture</h1>
+                <Link href={"/Blog/3"}><h1 className={`text-[24px] font-[600] text-center mt-5 underline max-[770px]:mt-2`}>Read More</h1></Link>
             </div>
            
         </div>

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import {Poppins} from "next/font/google"
 import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
+import Link from 'next/link'
 
 const PoppinsFont = Poppins({ subsets: ['latin'],weight:['400' , '700'] })
 
@@ -42,7 +43,7 @@ const page = async () => {
                     </div>
                         <p className='text-[1.3rem] font-[400] m-4 max-[610px]:leading-6 max-[610px]:text-[1rem] max-[404px]:leading-5 max-[404px]:m-2'>{val.shortdes}...</p>
 
-                        <p className='text-[1.3rem] font-[700] my-5 max-[610px]:my-3 max-[404px]:text-[1.1rem]'>{`View >`}</p>
+                        <Link href={`Blog/${val.id}`}><p className='text-[1.3rem] font-[700] my-5 max-[610px]:my-3 max-[404px]:text-[1.1rem]'>{`View >`}</p></Link>
                 </div>
             ))
         }

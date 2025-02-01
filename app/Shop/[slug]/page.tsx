@@ -72,7 +72,7 @@ const ProductPage = ({ params }: { params: Promise<{ slug: string }> }) => {
           <p className="text-xl font-[600] m-4 max-[370px]:m-2 max-[370px]:my-4 text-black">
             Discount: {refine.discountPercentage}%
           </p>
-          <div className={`${show?"block":"hidden"} w-full h-[50px] left-0 bottom-0 bg-[#f5df96] fixed transition-all flex justify-center items-center text-pretty font-[700]`}>ITEM ADDED TO CART SUCCESFULLY</div>
+          <div className={`${show?"block":"hidden"} w-full h-[50px] z-30 left-0 bottom-0 bg-[#f5df96] fixed transition-all flex justify-center items-center text-pretty font-[700]`}>ITEM ADDED TO CART SUCCESFULLY</div>
           <button
             onClick={()=>{
               send.setData((prevData: any[]) => [...(prevData || []), refine])

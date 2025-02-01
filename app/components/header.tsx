@@ -1,99 +1,50 @@
 "use client"
 import React from 'react'
-import { useState } from 'react'
-import { MdOutlineAccountCircle } from "react-icons/md";
-import { IoSearchSharp } from "react-icons/io5";    
-import { FaRegHeart } from "react-icons/fa";
-import { MdOutlineShoppingCart } from "react-icons/md";
-import {Poppins} from "next/font/google"
-import { CgMenuHotdog } from "react-icons/cg";
+import { RiAccountCircleFill } from "react-icons/ri";
+import { FiSearch } from "react-icons/fi";
+import { BsCart4 } from "react-icons/bs";
+import { IoMdHeart } from "react-icons/io";
+import { HiMenuAlt3 } from "react-icons/hi";
+import { useState } from 'react';
+import { Caveat } from 'next/font/google';
 import Link from 'next/link';
-import Image from 'next/image';
 
-const PoppinsFont = Poppins({ subsets: ['latin'],weight:['400' , '700'] })
-
+const caveat = Caveat({
+  subsets: ['latin'],
+  weight: ["400","700"]
+});
 const Header = () => {
-  const [show,setShow] = useState<boolean>(false)
-  const [menushow,setMenushow] = useState<boolean>(false)
-  function showorunshow(){
-  
-  if(show === false){
-      setShow(true)
-  }
-  else{
-      setShow(false)
-  }
-  }
-  function menushoworunshow(){
-  
-  if(menushow === false){
-    setMenushow(true)
-  }
-  else{
-    setMenushow(false)
-  }
-  }
-  function close(){
-    setShow(false)
-  }
-  function closemenu(){
-    setMenushow(false)
-  }
+    const [showMenu, setShowMenu] = useState(false);
+    const toggleMenu = () => setShowMenu(!showMenu);
+    function off(){
+      setShowMenu(false)
+    }
   return (
     <>
-      <div className='w-full h-[100px] relative bg-[#FBEBB5] flex justify-between items-center'>
-
-      
-      <div className='w-[300px] h-full flex justify-between items-center ml-[30rem] max-[1190px]:ml-[20rem] max-[1010px]:ml-[10rem] max-[860px]:w-[250px] max-[860px]:ml-[2rem] max-[560px]:hidden'>
-           <Link href={"/"}> <div className={`font-[600] ${PoppinsFont} text-[16px]`}>Home</div></Link>
-            <Link href={"/Shop"}><div className={`font-[600] ${PoppinsFont} text-[16px]`}>Shop</div></Link>
-            <Link href={"/About"}><div className={`font-[600] ${PoppinsFont} text-[16px]`}>About</div></Link>
-            <Link href={"/Contact"}><div className={`font-[600] ${PoppinsFont} text-[16px]`}>Contact</div></Link>
-
+      <div className='w-full h-[80px] bg-[#FBEBB5] flex justify-between items-center'>
+        <h1 className={`ml-5 text-[2rem] font-[700] ${caveat.className} text-white shadow-xl px-3 rounded-lg max-[488px]:text-[1.5rem] max-[380px]:text-[1.3rem] max-[380px]:ml-3`}>SHOUT-FURN</h1>
+        <div className='flex'>
+        <ul className='flex mx-10 max-[965px]:mx-5 max-[406px]:mx-3 max-[360px]:mx-0 max-[360px]:mr-5'>
+            <li className='mx-5 text-[1.3rem] hover:scale-110 transition-all duration-[1s] text-white max-[963px]:mx-3 max-[488px]:text-[1.1rem] max-[488px]:mt-1 max-[406px]:hidden max-[488px]:mx-2'><FiSearch /></li>
+            <Link href={"/Account"}><li className='mx-5 text-[1.3rem] hover:scale-110 transition-all duration-[1s] text-white max-[963px]:mx-3 max-[488px]:text-[1.1rem] max-[488px]:mt-1 max-[488px]:mx-2'><RiAccountCircleFill className=''/></li></Link>
+            <Link href={"/Cart"}><li className='mx-5 text-[1.3rem] hover:scale-110 transition-all duration-[1s] text-white max-[963px]:mx-3 max-[488px]:text-[1.1rem] max-[488px]:mt-1 max-[488px]:mx-2'><BsCart4 /></li></Link>
+           <li className='mx-5 text-[1.3rem] hover:scale-110 transition-all duration-[1s] text-white max-[963px]:mx-3 max-[488px]:text-[1.1rem] max-[488px]:mt-1 max-[488px]:mx-2'><IoMdHeart /></li>
+        </ul>
+        <ul className='flex mx-10 max-[965px]:mx-5 max-[770px]:hidden'>
+            <Link href={"/"}><li className='mx-5 text-[1rem] font-sans font-[600] text-white hover:scale-105 transition-all duration-[1s] cursor-pointer max-[963px]:mx-3'>Home</li></Link>
+            <Link href={"/About"}><li className='mx-5 text-[1rem] font-sans font-[600] text-white hover:scale-105 transition-all duration-[1s] cursor-pointer max-[963px]:mx-3'>About</li></Link>
+            <Link href={"/Contact"}><li className='mx-5 text-[1rem] font-sans font-[600] text-white hover:scale-105 transition-all duration-[1s] cursor-pointer max-[963px]:mx-3'>Contact</li></Link>
+            <li className='mx-5 text-[1rem] font-sans font-[600] text-white hover:scale-105 transition-all duration-[1s] cursor-pointer max-[963px]:mx-3'>Privacy Policy</li>
+        </ul>
+        <HiMenuAlt3 onClick={toggleMenu}  className='hidden max-[770px]:block text-white text-[1.5rem] mx-10 max-[440px]:mx-3'/>
         </div>
-
-        
-        <div className='w-[250px] max-[860px]:w-[200px] max-[390px]:w-[120px] h-full flex justify-between items-center mr-[8rem] max-[860px]:mr-[2rem] max-[560px]:ml-[2rem]'>
-            <Link href={"/Account"}><MdOutlineAccountCircle size={25} /></Link>
-            <IoSearchSharp size={25} />
-            <FaRegHeart size={25} className='max-[390px]:hidden '/>
-            <Link href={'/Cart'}><MdOutlineShoppingCart size={25} className='cursor-pointer'/></Link>
-
-        </div>
-        <CgMenuHotdog className='text-[2rem] mr-5 max-[560px]:block hidden' onClick={menushoworunshow}/>
-
-
-
-        
       </div>
-      <div className={`${menushow?'block':'hidden'} w-full h-[80vh] bg-[#FBEBB5] shadow-lg absolute z-30 flex flex-col justify-start items-center`}>
-        <Link href={"/"}><div  onClick={closemenu} className='w-full h-[70px] flex justify-center items-center text-[1.5rem] text-white font-[700]'>Home</div></Link>
-        <Link href={"/Shop"}><div  onClick={closemenu} className='w-full h-[70px] flex justify-center items-center text-[1.5rem] text-white font-[700]'>Shop</div></Link>
-        <Link href={"/Contact"}><div  onClick={closemenu} className='w-full h-[70px] flex justify-center items-center text-[1.5rem] text-white font-[700]'>Contact</div></Link>
-        <Link href={"/About"}><div  onClick={closemenu} className='w-full h-[70px] flex justify-center items-center text-[1.5rem] text-white font-[700]'>About</div></Link>
-      </div>
-        
-
-      <div className={`${show?'block':'hidden'} w-[417px] h-[746px] bg-white shadow-xl absolute right-0 z-30 flex flex-col justify-between items-center max-[420px]:w-full max-[420px]:h-[550px]`}>
-        <div className='w-full flex flex-col justify-center items-center'>
-        <p className='text-[36px] font-[700] text-black max-[350px]:text-[26px]'>Shopping Cart</p>
-        <div className='w-full h-[105px] max-[420px]:h-[80px] shadow-xl mt-[4rem] flex justify-start items-center'>
-            <div className='h-full w-[108px] bg-[#FBEBB5] max-[420px]:w-[90px]'>
-                <Image src={'/static/Herosame.png'} alt="" width={108} height={108} />
-            </div>
-            <div className='w-[150px] ml-10 flex flex-col justify-center items-center h-full'>
-                <p className='font-[500px] text-[20px]'>Asgaard sofa</p>
-                <p>1 x <span className='ml-4 text-[#B88E2F]'>Rs. 250,000.00</span></p>
-
-            </div>
+        <div className={`${showMenu ? "block" : "hidden" } w-full h-[80vh] flex flex-col justify-start items-center bg-[#FBEBB5]`}>
+            <Link href={"/"}><p onClick={off} className='text-[1.2rem] text-white font-[600] my-5 mt-10'>Home</p></Link>
+            <Link href={"About"}><p onClick={off} className='text-[1.2rem] text-white font-[600] my-5'>About</p></Link>
+            <Link href={"/Contact"}><p onClick={off} className='text-[1.2rem] text-white font-[600] my-5'>Contact</p></Link>
+            <p onClick={off} className='text-[1.2rem] text-white font-[600] my-5'>Privacy Policy</p>
         </div>
-        </div>
-                <div className='w-full flex justify-around h-[40px] mb-10'>
-
-                  <Link href={"/Cart"}><button onClick={close} className='bg-[#FBEBB5] px-6 py-2 rounded-full text-[16px] font-[600]'>View Cart</button></Link>
-                  <Link href={"/Checkout"}><button onClick={close} className='bg-[#FBEBB5] px-6 py-2 rounded-full text-[16px] font-[600]'>Check Out</button></Link>
-                </div>
-      </div>
     </>
   )
 }
